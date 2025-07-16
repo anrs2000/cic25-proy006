@@ -1,9 +1,11 @@
-package es.cic.curso25.proy006;
+package es.cic.curso25.proy006.Service;
 
 import org.springframework.stereotype.Service;
 
+import es.cic.curso25.proy006.Model.Habito;
+
 @Service
-public class Habitoservice {
+public class HabitoService {
     private long contador;
 
     public long create(Habito habito){

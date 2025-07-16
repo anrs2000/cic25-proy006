@@ -1,22 +1,9 @@
-package es.cic.curso25.proy006;
+package es.cic.curso25.proy006.Model;
 
 import java.sql.Date;
 import java.time.LocalDate;
 
 public class Habito {
-
-    public enum Categoria {
-        SALUD,
-        EDUCACION,
-        FINANZAS,
-        PRODUCTIVIDAD,
-        CREATIVIDAD,
-        RELACIONES,
-        DESARROLLO_PERSONAL,
-        OCIO,
-        ORGANIZACION,
-        SOSTENIBILIDAD
-    };
 
     // ATRIBUTOS
     public String nombre;
@@ -30,12 +17,6 @@ public class Habito {
     public Date ultimaFechaCompletada;
 
     public Date[] fechasCompletadas;
-
-    // Constructor
-    // public Habitos(String nombre, String descripcion, Date fechaInicio, boolean estado, Categoria categoria,
-    //         Date ultimaFechaCompletada, Date[] fechasCompletadas) {
-    //             this.nombre = nombre;
-    // }
 
     // Getter
 

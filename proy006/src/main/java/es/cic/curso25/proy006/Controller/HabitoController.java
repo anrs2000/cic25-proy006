@@ -1,4 +1,4 @@
-package es.cic.curso25.proy006;
+package es.cic.curso25.proy006.Controller;
 
 import java.time.LocalDate;
 
@@ -12,15 +12,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import es.cic.curso25.proy006.Habito.Categoria;
+import es.cic.curso25.proy006.Model.Habito;
+import es.cic.curso25.proy006.Model.Categoria;
+import es.cic.curso25.proy006.Service.HabitoService;
 
 @RestController
 @RequestMapping("/habito")
 public class HabitoController {
     @Autowired
-    private Habitoservice habitoService;
+    private HabitoService habitoService;
 
-    @GetMapping
+    @GetMapping("/{id}")
     public Habito get(@PathVariable long id){
         Habito habito1 = new Habito();
 
@@ -31,10 +33,9 @@ public class HabitoController {
         habito1.setEstado(true);
 
 
-        habito1.setId(habitoService.getContador());
+        habito1.setId(id);
 
         habito1.setCategoria(Categoria.CREATIVIDAD);
-
 
         return habito1;
     }
